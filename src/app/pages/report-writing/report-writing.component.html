@@ -1,3 +1,20 @@
-<h1>Redacción de Informes</h1>
+<h1>Informe de Estado del Proyecto</h1>
 
-<p>Contenido no implementado.</p>
+<div class="report-section">
+    <h2>Resumen de Tareas</h2>
+    <p>Se está realizando el seguimiento de <strong>{{ totalTasks }} tareas</strong> en total.</p>
+    <ul>
+        <li>Tareas completadas: <strong>{{ completedTasks }}</strong></li>
+        <li>Tareas en progreso o pendientes: <strong>{{ totalTasks - completedTasks }}</strong></li>
+    </ul>
+    <p>El equipo debe centrarse en las tareas pendientes para cumplir con la fecha de entrega del <strong>{{ lastDueDate }}</strong>.</p>
+</div>
+
+<div class="report-section">
+    <h2>Resumen de Riesgos</h2>
+    <p>Se han identificado un total de <strong>{{ totalRisks }} riesgos</strong> para el proyecto.</p>
+    <ul>
+        <li>Riesgos de alto impacto: <strong>{{ highImpactRisks }}</strong></li>
+    </ul>
+    <p>Es crucial aplicar las estrategias de mitigación para los riesgos de alto impacto, especialmente los relacionados con el <strong>alcance del proyecto (scope creep)</strong> y la <strong>dependencia de proveedores</strong>.</p>
+</div>

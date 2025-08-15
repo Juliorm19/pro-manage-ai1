@@ -1,3 +1,19 @@
-<h1>Evaluación de riesgos</h1>
-
-<p>Contenido no implementado.</p>
+<h1>Evaluación de Riesgos</h1>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Descripción del Riesgo</th>
+            <th>Probabilidad</th>
+            <th>Impacto</th>
+            <th>Estrategia de Mitigación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let risk of risks">
+            <td>{{ risk.description }}</td>
+            <td>{{ risk.probability }}</td>
+            <td>{{ risk.impact }}</td>
+            <td>{{ risk.mitigation }}</td>
+        </tr>
+    </tbody>
+</table>

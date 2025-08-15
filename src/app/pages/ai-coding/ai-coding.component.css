@@ -1,7 +1,6 @@
 h1 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: var(--text-color-light);
 }
 .bot-dialogue-bubble {
     background-color: #F1F1F1;
@@ -39,7 +38,12 @@ h1 {
 }
 .gantt-tabs button.active {
     background-color: #e9ecef;
-    color: var(--text-color-light);
+}
+.gantt-content {
+    display: none;
+}
+.gantt-content.active {
+    display: block;
 }
 .gantt-chart {
     margin-top: 2rem;
@@ -52,7 +56,6 @@ h1 {
     padding: 1rem;
     text-align: left;
     border-bottom: 1px solid var(--border-color);
-    color: var(--text-color-light);
 }
 .gantt-table th {
     color: #6c757d;
@@ -81,9 +84,12 @@ h1 {
     width: 20%;
     left: 75%;
 }
-.download-icon {
-    text-align: right;
-    margin-top: 1rem;
-    cursor: pointer;
-    color: var(--text-color-light);
+.code-block {
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
 }

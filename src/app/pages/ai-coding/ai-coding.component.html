@@ -1,59 +1,31 @@
 <h1>Codificación IA</h1>
 <div class="bot-dialogue-bubble">
-    <p>Perfecto. Estoy generando un esquema automatizado del cronograma, estructurado según las fases del proyecto. Aquí tienes una vista previa del cronograma generado:</p>
+    <p>Perfecto. He generado el cronograma y su correspondiente código LaTeX. Puedes alternar entre la vista previa y el código.</p>
 </div>
 <div class="gantt-chart-container">
     <div class="gantt-header">
-        <h2>Esquema Automatizado del Cronograma del Proyecto</h2>
+        <h2>Esquema Automatizado del Cronograma</h2>
         <div class="gantt-tabs">
-            <button class="active">Preview</button>
-            <button>Code</button>
+            <button (click)="setActiveTab('preview')" [class.active]="activeTab === 'preview'">Preview</button>
+            <button (click)="setActiveTab('code')" [class.active]="activeTab === 'code'">Code</button>
         </div>
     </div>
-    <div class="gantt-chart">
-        <table class="gantt-table">
-            <thead>
-                <tr>
-                    <th style="width: 20%;">Fase</th>
-                    <th style="width: 20%;">Sept</th>
-                    <th style="width: 20%;">Oct</th>
-                    <th style="width: 20%;">Nov</th>
-                    <th style="width: 20%;">Dic</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Inicio</td>
-                    <td colspan="4"></td>
-                </tr>
-                <tr>
-                    <td>Planificación</td>
-                    <td colspan="4">
-                        <div class="gantt-bar-container">
-                            <div class="gantt-bar bar-planning"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ejecución</td>
-                    <td colspan="4">
-                        <div class="gantt-bar-container">
-                            <div class="gantt-bar bar-execution"></div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Cierre</td>
-                    <td colspan="4">
-                        <div class="gantt-bar-container">
-                            <div class="gantt-bar bar-closure"></div>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    
+    <div class="gantt-content" [class.active]="activeTab === 'preview'">
+        <div class="gantt-chart">
+            <table class="gantt-table">
+                <thead><tr><th>Fase</th><th>Sept</th><th>Oct</th><th>Nov</th><th>Dic</th></tr></thead>
+                <tbody>
+                    <tr><td>Inicio</td><td colspan="4"></td></tr>
+                    <tr><td>Planificación</td><td colspan="4"><div class="gantt-bar-container"><div class="gantt-bar bar-planning"></div></div></td></tr>
+                    <tr><td>Ejecución</td><td colspan="4"><div class="gantt-bar-container"><div class="gantt-bar bar-execution"></div></div></td></tr>
+                    <tr><td>Cierre</td><td colspan="4"><div class="gantt-bar-container"><div class="gantt-bar bar-closure"></div></div></td></tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="download-icon">
-        <i class="material-icons">download</i>
+
+    <div class="gantt-content" [class.active]="activeTab === 'code'">
+        <pre class="code-block"><code>{{ latexCode }}</code></pre>
     </div>
 </div>
