@@ -1,0 +1,85 @@
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-color-light);
+}
+.chat-container {
+    height: calc(100vh - 280px);
+    overflow-y: auto;
+    padding-right: 1rem;
+    margin-bottom: 1.5rem;
+}
+.chat-message {
+    display: flex;
+    margin-bottom: 1.5rem;
+    max-width: 80%;
+}
+.chat-message.user {
+    margin-left: auto;
+    flex-direction: row-reverse;
+}
+.message-bubble {
+    padding: 1rem;
+    border-radius: 12px;
+}
+.chat-message.user .message-bubble {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-bottom-right-radius: 0;
+}
+.chat-message.bot .message-bubble {
+    background-color: #F1F1F1;
+    color: var(--text-color-light);
+    border-bottom-left-radius: 0;
+}
+:host ::ng-deep .message-bubble ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+:host ::ng-deep .message-bubble li {
+    margin-bottom: 0.5rem;
+}
+:host ::ng-deep .message-bubble p {
+    margin-top: 1rem;
+}
+.chat-input-area {
+    position: relative;
+}
+#chat-input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 1rem;
+}
+#send-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.suggestion-chips {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.suggestion-chip {
+    background-color: #F1F1F1;
+    border: 1px solid var(--border-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--text-color-light);
+}

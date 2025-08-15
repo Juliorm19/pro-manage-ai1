@@ -1,0 +1,25 @@
+<nav class="sidebar">
+    <div class="sidebar-header">PRO-MANAGE</div>
+    <button class="new-query-btn" (click)="startNewQuery()">
+        <i class="material-icons">add</i>
+        Iniciar nueva consulta
+    </button>
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a routerLink="/app/asistente-ia" routerLinkActive="active"><i class="material-icons">assistant</i> Asistente IA</a></li>
+            <li><a routerLink="/app/redaccion-informes" routerLinkActive="active"><i class="material-icons">description</i> Redacción de Informes</a></li>
+            <li><a routerLink="/app/visualizacion-tareas" routerLinkActive="active"><i class="material-icons">visibility</i> Visualización de tareas</a></li>
+            <li><a routerLink="/app/codificacion-ia" routerLinkActive="active"><i class="material-icons">code</i> Codificación IA</a></li>
+            <li><a routerLink="/app/evaluacion-riesgos" routerLinkActive="active"><i class="material-icons">error_outline</i> Evaluación de riesgos</a></li>
+        </ul>
+    </nav>
+    <div class="history-section">
+        <h3>Historial</h3>
+        <ul class="history-list">
+            <li><a href="#">Crear tareas según estructura WBS del sprint actual.</a></li>
+            <li><a href="#">Asignar responsables de tareas basado en carga de trabajo</a></li>
+            <li><a href="#" class="view-all">Ver todo</a></li>
+        </ul>
+    </div>
+    <app-user-profile></app-user-profile>
+</nav>

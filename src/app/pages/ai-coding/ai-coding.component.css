@@ -1,0 +1,89 @@
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-color-light);
+}
+.bot-dialogue-bubble {
+    background-color: #F1F1F1;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    display: inline-block;
+    color: var(--text-color-light);
+}
+.gantt-chart-container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+}
+.gantt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.gantt-header h2 {
+    font-size: 1.5rem;
+    color: var(--text-color-light);
+}
+.gantt-tabs button {
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    color: var(--text-color-light);
+}
+.gantt-tabs button.active {
+    background-color: #e9ecef;
+    color: var(--text-color-light);
+}
+.gantt-chart {
+    margin-top: 2rem;
+}
+.gantt-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.gantt-table th, .gantt-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color-light);
+}
+.gantt-table th {
+    color: #6c757d;
+}
+.gantt-bar-container {
+    position: relative;
+    height: 30px;
+}
+.gantt-bar {
+    position: absolute;
+    height: 100%;
+    border-radius: 4px;
+}
+.bar-planning {
+    background-color: #A9B4D2;
+    width: 40%;
+    left: 10%;
+}
+.bar-execution {
+    background-color: var(--dark-blue);
+    width: 50%;
+    left: 30%;
+}
+.bar-closure {
+    background-color: #A9B4D2;
+    width: 20%;
+    left: 75%;
+}
+.download-icon {
+    text-align: right;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: var(--text-color-light);
+}

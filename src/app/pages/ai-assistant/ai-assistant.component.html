@@ -1,0 +1,13 @@
+<h1>Chatbot Inteligente</h1>
+<div class="chat-container" #chatContainer>
+    <div *ngFor="let msg of messages" [ngClass]="'chat-message ' + msg.sender">
+        <div class="message-bubble" [innerHTML]="msg.content"></div>
+    </div>
+</div>
+<div class="chat-input-area">
+    <input type="text" id="chat-input" placeholder="PRO-MANAGE AI" [(ngModel)]="currentMessage" (keyup.enter)="sendMessage()">
+    <button id="send-btn" (click)="sendMessage()"><i class="material-icons">arrow_upward</i></button>
+</div>
+<div class="suggestion-chips">
+    <button *ngFor="let chip of suggestionChips" class="suggestion-chip" (click)="useSuggestion(chip)">{{chip}}</button>
+</div>

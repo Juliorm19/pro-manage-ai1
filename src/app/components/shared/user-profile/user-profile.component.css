@@ -1,0 +1,35 @@
+.user-profile {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-blue);
+    padding: 10px;
+    border-radius: 8px;
+}
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.user-info {
+    flex-grow: 1;
+}
+.user-name {
+    color: var(--text-color-dark);
+    font-weight: 500;
+}
+.logout-icon {
+    color: var(--sidebar-text);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.logout-icon:hover {
+    color: var(--text-color-dark);
+}
