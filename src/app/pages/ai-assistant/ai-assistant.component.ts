@@ -51,7 +51,7 @@ export class AiAssistantComponent implements OnInit, AfterViewChecked {
       
       // Simulate bot response
       setTimeout(() => {
-        this.messages.push({ sender: 'bot', content: 'Estoy procesando tu solicitud... Dame un momento.' });
+        this.messages.push({ sender: 'bot', content: 'Informe del proyecto Alfah: El 72 % de las tareas planificadas están completadas. Se registran 3 tareas con retraso en la fase de desarrollo, lo que representa un impacto potencial de 5 días sobre la fecha de entrega final. Recomendación: reasignar recursos a las tareas críticas y priorizar la integración de módulos pendientes según el marco PMI para evitar desviaciones adicionales.' });
       }, 1000);
     }
   }
